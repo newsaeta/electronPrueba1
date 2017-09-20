@@ -1,16 +1,20 @@
 {
   "name": "electronprueba",
   "version": "1.0.0",
-  "description": "",
+  "description": "Aplicación de prueba",
   "main": "index.js",
   "scripts": {
-    "dev": "electron index.js",
+    "dev": "cross-env NODE_ENV=development electron src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron src/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron": "^1.7.6"
+    "cross-env": "^5.0.5",
+    "electron-compile": "^6.4.2"
+  },
+  "devDependencies": {
+    "electron-prebuilt-compile": "^1.7.6"
   }
 }
